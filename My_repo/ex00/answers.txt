@@ -1,0 +1,4 @@
+1.pip list
+2.python3 -m pip show numpy
+3.pip uninstall / sudo apt remove python3-numpy
+4.pip install / sudo apt install python3-numpy
