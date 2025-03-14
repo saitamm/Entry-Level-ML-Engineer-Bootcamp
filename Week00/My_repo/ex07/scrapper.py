@@ -8,10 +8,9 @@ def main():
     response = requests.get(url)
     if response.status_code != 200:
             print(f"Failed to fetch the page. Status code: {response.status_code}")
-    print(response.text)
     soup = BeautifulSoup(response.text, "html.parser")
     title_1 = soup.find_all("th")
-    with open("file2.csv", "w") as f:
+    with open("data.csv", "w") as f:
         for td_1 in title_1:
               f.write(td_1.text.strip() + ", ")
         f.write("\n")
